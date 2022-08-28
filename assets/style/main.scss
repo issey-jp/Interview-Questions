@@ -1,0 +1,68 @@
+body {
+    font-family: YuGothic, "Yu Gothic", "ヒラギノ角ゴシック", "Hiragino Sans", sans-serif;
+}
+
+.slide-fade {
+    &-enter-active {
+        transition: all 0.3s ease;
+    }
+
+    &-leave-active {
+        transition: all 0.3s;
+    }
+
+    &-enter-from,
+    &-leave-to {
+        opacity: 0;
+        transform: translateY(-1rem);
+    }
+}
+
+.fade {
+    &-enter-active {
+        transition: all 0.3s ease;
+    }
+
+    &-leave-active {
+        transition: all 0.3s;
+    }
+
+    &-enter-from,
+    &-leave-to {
+        opacity: 0;
+    }
+}
+
+.flexbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.section-title {
+    @media screen and (min-width: 640px) {
+        min-height: 3em;
+    }
+}
+
+main {
+    min-height: 90vh;
+}
+
+footer {
+    height: 10vh;
+    margin-top: auto;
+}
+
+.edit {
+    transition: all 0.3s;
+    &::after {
+        content: "編集する";
+        border: 0.5px solid rgba($color: gray, $alpha: 0.33);
+        padding: 0.5rem 1rem;
+    }
+    &:hover {
+        opacity: 0.7;
+    }
+}
